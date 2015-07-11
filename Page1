@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <link rel="stylesheet" href="page1css.css">
+	
+		<script type="text/javascript"
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJV5vo1mKNQ1w0EITrjikceqyMk93CWCw">
+		</script>
+	
+		<script type="text/javascript">
+			function initialize() {
+				var myLatlng = new google.maps.LatLng(12.838831700000000000,77.660171499999930000);
+				
+				var	 mapOptions = {
+					zoom: 18,
+					center: myLatlng
+				}	
+				
+				var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+				var marker = new google.maps.Marker({
+					position: myLatlng,
+					map: map,
+					title: 'Hello World!'
+				});
+			}
+			
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+	
+	</head>
+	<body >
+		
+        <p style="font-size:200%; font-family:Courier"> Where is my order? </p>
+		  <div id="map-canvas"></div>  
+</body>
+</html>
